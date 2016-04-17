@@ -1,0 +1,14 @@
+PODS:
+  - FeatureSwitch (0.1.0)
+
+DEPENDENCIES:
+  - FeatureSwitch (from `../`)
+
+EXTERNAL SOURCES:
+  FeatureSwitch:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FeatureSwitch: 0e99ca6ae8442118f3afb56f331fef97e7e00416
+
+COCOAPODS: 0.39.0

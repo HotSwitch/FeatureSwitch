@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "FeatureSwitch"
   s.version          = "0.1.0"
-  s.summary          = "A short description of FeatureSwitch."
+  s.summary          = "Simple library that handles allowing and disallowing features in an iOS Apple."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -19,12 +19,11 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/FeatureSwitch"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/HotSwitch/FeatureSwitch"
   s.license          = 'MIT'
   s.author           = { "Ravel Antunes" => "ravelantunes@gmail.com" }
   s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/FeatureSwitch.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/hotswitch'
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true
