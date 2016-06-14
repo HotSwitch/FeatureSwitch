@@ -10,9 +10,13 @@ import UIKit
 
 public class FeatureManager: NSObject {
     
+    public static let sharedInstance: FeatureManager = {
+        return FeatureManager()
+    }()
+
+    
     private var featureSet: Set<String>
     private var featureExecutionMap: [String: [(()->())]] = [:]
-    
     
     public override init() {
         featureSet = Set<String>()
@@ -25,13 +29,14 @@ public class FeatureManager: NSObject {
     }
     
     public func whenEnabled(featureName: String, run: () -> Void) {
-        if isFeatureEnabled(featureName) {
+        if isFeatureEnabled(featureName: featureName) {
             //Run right away if feature is enabled
             run()
         } else {
             //If not enabled, either add to existing array of functions, or create a new array
             if var featureExecutions = featureExecutionMap[featureName] {
                 featureExecutions.append(run)
+                featureExecutionMap[featureName] = featureExecutions
             } else {
                 featureExecutionMap[featureName] = [run]
             }
@@ -39,7 +44,7 @@ public class FeatureManager: NSObject {
     }
     
     public func ifFeatureEnabled(featureName: String, run: () -> Void) {
-        guard isFeatureEnabled(featureName) else {
+        guard isFeatureEnabled(featureName: featureName) else {
             return
         }
         run()
@@ -50,11 +55,11 @@ public class FeatureManager: NSObject {
     public func enableFeature(featureName: String) {
         featureSet.insert(featureName)
         
-        guard featureExecutionMap[featureName] != nil else {
+        guard let executions = featureExecutionMap[featureName] else {
             return
         }
         
-        featureExecutionMap[featureName]!.forEach({ (block: (() -> ())) -> () in
+        executions.forEach({ (block: (() -> ())) -> () in
             print("executing for \(featureName)")
             block()
         })
