@@ -20,9 +20,9 @@
     // Do any additional setup after loading the view.
     
     FeatureManager *f = [[FeatureManager alloc] init];
-    [f whenEnabledWithFeatureName:@"test" run:^{
+    [f whenEnabled:@"test" run:^{
         
-    }];    
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
