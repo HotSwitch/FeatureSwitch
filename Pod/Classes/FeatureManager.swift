@@ -8,15 +8,15 @@
 
 import UIKit
 
-public class FeatureManager: NSObject {
+open class FeatureManager: NSObject {
     
-    public static let sharedInstance: FeatureManager = {
+    open static let sharedInstance: FeatureManager = {
         return FeatureManager()
     }()
 
     
-    private var featureSet: Set<String>
-    private var featureExecutionMap: [String: [(()->())]] = [:]
+    fileprivate var featureSet: Set<String>
+    fileprivate var featureExecutionMap: [String: [(()->())]] = [:]
     
     public override init() {
         featureSet = Set<String>()
@@ -28,8 +28,8 @@ public class FeatureManager: NSObject {
         super.init()
     }
     
-    public func whenEnabled(featureName: String, run: () -> Void) {
-        if isFeatureEnabled(featureName: featureName) {
+    open func whenEnabled(_ featureName: String, run: @escaping () -> Void) {
+        if isFeatureEnabled(featureName) {
             //Run right away if feature is enabled
             run()
         } else {
@@ -43,8 +43,8 @@ public class FeatureManager: NSObject {
         }
     }
     
-    public func ifFeatureEnabled(featureName: String, run: () -> Void) {
-        guard isFeatureEnabled(featureName: featureName) else {
+    open func ifFeatureEnabled(_ featureName: String, run: () -> Void) {
+        guard isFeatureEnabled(featureName) else {
             return
         }
         run()
@@ -52,7 +52,7 @@ public class FeatureManager: NSObject {
     
     //MARK: - TOGGLING AND VERIFICATION
     
-    public func enableFeature(featureName: String) {
+    open func enableFeature(_ featureName: String) {
         featureSet.insert(featureName)
         
         guard let executions = featureExecutionMap[featureName] else {
@@ -66,11 +66,11 @@ public class FeatureManager: NSObject {
 
     }
     
-    public func disableFeature(featureName: String) {
+    open func disableFeature(_ featureName: String) {
         featureSet.remove(featureName)
     }
 
-    public func isFeatureEnabled(featureName: String) -> Bool {
+    open func isFeatureEnabled(_ featureName: String) -> Bool {
         return featureSet.contains(featureName)    
     }
 }

@@ -6,9 +6,9 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   FeatureSwitch:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
-  FeatureSwitch: 0e99ca6ae8442118f3afb56f331fef97e7e00416
+  FeatureSwitch: 6a2568cc4545a4c91c6805d838e3065b5482b11c
 
 COCOAPODS: 0.39.0
