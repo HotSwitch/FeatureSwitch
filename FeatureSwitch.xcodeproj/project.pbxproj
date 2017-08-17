@@ -8,10 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AB464B301F3A50940009A77C /* FeatureSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = AB464B2E1F3A50940009A77C /* FeatureSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB464B371F3A50BB0009A77C /* FeatureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB464B361F3A50BB0009A77C /* FeatureManager.swift */; };
-		AB464B3C1F3A7A340009A77C /* FeatureManager.swift in Headers */ = {isa = PBXBuildFile; fileRef = AB464B361F3A50BB0009A77C /* FeatureManager.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB464B9A1F3A9ECC0009A77C /* FeatureSwitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB464B2B1F3A50940009A77C /* FeatureSwitch.framework */; };
 		AB464BA21F3A9F990009A77C /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB464BA11F3A9F990009A77C /* Tests.swift */; };
+		AB66D4601F456D0400A44EBC /* FeatureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB464B361F3A50BB0009A77C /* FeatureManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,7 +99,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB464B301F3A50940009A77C /* FeatureSwitch.h in Headers */,
-				AB464B3C1F3A7A340009A77C /* FeatureManager.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB464B371F3A50BB0009A77C /* FeatureManager.swift in Sources */,
+				AB66D4601F456D0400A44EBC /* FeatureManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +254,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -275,7 +274,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = FeatureSwitch;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -310,6 +311,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -322,7 +324,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_MODULE_NAME = FeatureSwitch;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
