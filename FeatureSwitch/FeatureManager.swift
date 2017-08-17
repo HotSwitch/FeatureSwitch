@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class FeatureManager: NSObject {
+open class FeatureManager: NSObject {
     
     open static let sharedInstance: FeatureManager = {
         return FeatureManager()
