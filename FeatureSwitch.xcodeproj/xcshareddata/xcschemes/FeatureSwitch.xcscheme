@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AB8C023A1F32B37D00601AB3"
+               BlueprintIdentifier = "AB464B2A1F3A50940009A77C"
                BuildableName = "FeatureSwitch.framework"
                BlueprintName = "FeatureSwitch"
                ReferencedContainer = "container:FeatureSwitch.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AB8C023A1F32B37D00601AB3"
+            BlueprintIdentifier = "AB464B2A1F3A50940009A77C"
             BuildableName = "FeatureSwitch.framework"
             BlueprintName = "FeatureSwitch"
             ReferencedContainer = "container:FeatureSwitch.xcodeproj">
@@ -63,7 +63,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AB8C023A1F32B37D00601AB3"
+            BlueprintIdentifier = "AB464B2A1F3A50940009A77C"
             BuildableName = "FeatureSwitch.framework"
             BlueprintName = "FeatureSwitch"
             ReferencedContainer = "container:FeatureSwitch.xcodeproj">
