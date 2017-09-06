@@ -10,6 +10,7 @@
 		AB464B301F3A50940009A77C /* FeatureSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = AB464B2E1F3A50940009A77C /* FeatureSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB464B9A1F3A9ECC0009A77C /* FeatureSwitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB464B2B1F3A50940009A77C /* FeatureSwitch.framework */; };
 		AB464BA21F3A9F990009A77C /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB464BA11F3A9F990009A77C /* Tests.swift */; };
+		AB5320231F5FA87D002336FE /* FeatureManager.swift in Headers */ = {isa = PBXBuildFile; fileRef = AB464B361F3A50BB0009A77C /* FeatureManager.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB66D4601F456D0400A44EBC /* FeatureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB464B361F3A50BB0009A77C /* FeatureManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB464B301F3A50940009A77C /* FeatureSwitch.h in Headers */,
+				AB5320231F5FA87D002336FE /* FeatureManager.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
