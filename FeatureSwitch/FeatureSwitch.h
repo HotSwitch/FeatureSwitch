@@ -14,4 +14,4 @@ FOUNDATION_EXPORT double FeatureSwitchVersionNumber;
 //! Project version string for FeatureSwitch.
 FOUNDATION_EXPORT const unsigned char FeatureSwitchVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <FeatureSwitch/PublicHeader.h>
+#import <FeatureSwitch/FeatureSwitch.h>
