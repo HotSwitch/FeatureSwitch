@@ -8,9 +8,9 @@
 
 import UIKit
 
-open class FeatureManager: NSObject {
+@objc open class FeatureManager: NSObject {
     
-    open static let sharedInstance: FeatureManager = {
+    @objc open static let sharedInstance: FeatureManager = {
         return FeatureManager()
     }()
 
@@ -18,17 +18,17 @@ open class FeatureManager: NSObject {
     fileprivate var featureSet: Set<String>
     fileprivate var featureExecutionMap: [String: [(()->())]] = [:]
     
-    public override init() {
+    @objc public override init() {
         featureSet = Set<String>()
         super.init()
     }
     
-    public init(featureSet: Set<String>) {
+    @objc public init(featureSet: Set<String>) {
         self.featureSet = featureSet
         super.init()
     }
     
-    open func whenEnabled(_ featureName: String, run: @escaping () -> Void) {
+    @objc open func whenEnabled(_ featureName: String, run: @escaping () -> Void) {
         if isFeatureEnabled(featureName) {
             //Run right away if feature is enabled
             run()
@@ -43,7 +43,7 @@ open class FeatureManager: NSObject {
         }
     }
     
-    open func ifFeatureEnabled(_ featureName: String, run: () -> Void) {
+    @objc open func ifFeatureEnabled(_ featureName: String, run: () -> Void) {
         guard isFeatureEnabled(featureName) else {
             return
         }
@@ -52,7 +52,7 @@ open class FeatureManager: NSObject {
     
     //MARK: - TOGGLING AND VERIFICATION
     
-    open func enableFeature(_ featureName: String) {
+    @objc open func enableFeature(_ featureName: String) {
         featureSet.insert(featureName)
         
         guard let executions = featureExecutionMap[featureName] else {
@@ -66,11 +66,11 @@ open class FeatureManager: NSObject {
 
     }
     
-    open func disableFeature(_ featureName: String) {
+    @objc open func disableFeature(_ featureName: String) {
         featureSet.remove(featureName)
     }
 
-    open func isFeatureEnabled(_ featureName: String) -> Bool {
+    @objc open func isFeatureEnabled(_ featureName: String) -> Bool {
         return featureSet.contains(featureName)    
     }
 }
